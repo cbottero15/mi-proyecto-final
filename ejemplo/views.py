@@ -30,12 +30,16 @@ def index_tres(request):
     )
 
 def imc(request, peso, altura):
+    altura_en_metros = altura / 100
+    peso_en_kilos = peso / 100
+    imc = peso_en_kilos / altura_en_metros * altura_en_metros
     
-    imc = peso, altura  # imc = (peso / (altura * altura))
-
     return render(request, "ejemplo/imc.html", {"imc": imc})
     
 
 def monstrar_familiares(request):
   lista_familiares = Familiar.objects.all()
   return render(request, "ejemplo/familiares.html", {"lista_familiares": lista_familiares})
+
+def mostrar_un_solo_familar(request, id):
+    Familiar.objects.get(id)
