@@ -26,5 +26,5 @@ urlpatterns = [
     path('mostrar-notas/', index_tres),
     path('imc/<peso>/<altura>/', imc),
     path('mi-familia/', mostrar_familiares),
-    path('blog/', blog_index),
+    path('blog_index/', blog_index),
 ]
