@@ -9,11 +9,11 @@
 <body>
 
     <h1>Lista de mis familiares</h1>
-    <h3> Apellido y Nombres                              Localidad</h3>
+    <p> Apellido y Nombre   -   Domicilio</p>
 
     {% for familiar in lista_familiares %}
         <ul>
-            <li> {{familiar.apellido}}, {{familiar.nombre}}, {{familiar.localidad}} </li>
+            <li> {{familiar.apellido}} {{familiar.nombre}}, {{familiar.direccion}} - {{familiar.localidad}} </li>
         </ul>
     {% endfor %}
     
