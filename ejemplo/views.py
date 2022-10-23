@@ -27,3 +27,6 @@ def imc(request, peso, altura):
 def mostrar_familiares(request):
   lista_familiares = Familiar.objects.all()
   return render(request, "ejemplo/familiares.html", {"lista_familiares": lista_familiares})
+
+def mostrar_un_solo_familar(request, id):
+    Familiar.objects.get(id)
