@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from ejemplo.models import Familiar
-from django.views import View 
 from ejemplo.forms import Buscar, FamiliarForm
 from django.views import View
+
 
 def index(request):
     suma = 5 + 10
@@ -77,4 +77,7 @@ class AltaFamiliar(View):
                                                         'msg_exito': msg_exito})
         
         return render(request, self.template_name, {"form": form})
+    
+
+    
     
