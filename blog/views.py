@@ -2,10 +2,10 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import View
 from django.views.generic import ListView, CreateView, DeleteView, UpdateView, DetailView
-from blog.models import Post, Configuracion
+from blog.models import Post
 
-def index(request):
-    return render(request, 'blog/index.html')
+def inicio(request):
+    return render(request,'blog/menu_inicial.html')
 
 class ListPost(ListView):
     model=Post

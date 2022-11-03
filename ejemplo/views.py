@@ -73,9 +73,7 @@ class AltaFamiliar(View):
             form.save()
             msg_exito = f"se cargo con éxito el familiar {form.cleaned_data.get('nombre')}"
             form = self.form_class(initial=self.initial)
-            return render(request, self.template_name, {'form':form, 
-                                                        'msg_exito': msg_exito})
-        
+            return render(request, self.template_name, {'form':form,'msg_exito': msg_exito})
         return render(request, self.template_name, {"form": form})
     
 

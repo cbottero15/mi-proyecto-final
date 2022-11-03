@@ -1,20 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    ¿Está seguro de borrar el post {{post.title}}? 
+{% extends 'blog/base.html' %}
+
+{% block titulo%} Borrar Posteos {% endblock %}
+
+{% block contenido %}
+
     <form method="post">
-        {{form}}
-        <input type="submit" value="si">
+        {% csrf_token %}
+        "¿ Estás seguro de borrar el post {{ object }} ?"
+        <input type="submit" value="SI">
     </form>
+    
+    <form action="{% url 'inicio' %}">
+        <button class="btn btn-danger btn-lg">Volver</button>
+      </form>
 
-    <a href="{% url 'list-post' %}">Volver a la lista de post</a>
-
-
-</body>
-</html>
+{% endblock %}

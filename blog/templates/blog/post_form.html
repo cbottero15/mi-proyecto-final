@@ -1,20 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'blog/base.html' %}
 
-    <form method="post">
+{% block titulo%} Cargar Posteos {% endblock %}
+
+{% block contenido %}
+
+    <form method="post"> <!--No es necesario pasarle action-->
         {% csrf_token %}
         {{form.as_p}}
-        <input type="submit" value="Publish">
+        <input type="submit" value="Agregar">
     </form>
 
-    <a href="{% url 'list-post' %}">Volver a la lista de post</a>
+    <form action="{% url 'inicio' %}">
+        <button class="btn btn-danger btn-lg">Volver</button>
+      </form>
 
-</body>
-</html>
+{% endblock %}
+

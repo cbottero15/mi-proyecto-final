@@ -1,8 +1,9 @@
 from django.shortcuts import render
+from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView, DeleteView, UpdateView
 from ejemplo.models import Familiar
+from panel_familia.models import Familiar
 
-# Create your views here.
 
 class FamiliarList(ListView):
     model = Familiar
