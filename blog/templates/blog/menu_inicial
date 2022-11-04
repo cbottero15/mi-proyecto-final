@@ -1,0 +1,30 @@
+{% extends 'blog/base.html' %}
+{% block contenido %}
+<div class="container">
+    <h3 style="text-align:left;">USUARIOS</h3>
+    <form action="{% url 'crear-usuario' %}">
+        <button class="btn btn-danger btn-lg">Crear Usuario</button>
+    </form>
+    <form action="{% url 'buscar-usuario' %}">
+        <button class="btn btn-danger btn-lg">Buscar Usuario</button>
+    </form>
+    <form action="{% url 'listar-usuario' %}">
+        <button class="btn btn-danger btn-lg">Lista Usuario</button>
+    </form>
+
+    <h3 style="text-align:left;">POSTEOS</h3>
+    <form action="{% url 'crear-post' %}">
+        <button class="btn btn-danger btn-lg">Cargar Posteos</button>
+    </form>
+    <form action="{% url 'list-post' %}">
+        <button class="btn btn-danger btn-lg">Listar Posteos</button>
+    </form>
+
+    <h3 style="text-align:left;">CATEGORIAS</h3>
+    <form action="{% url 'crear-categoria' %}">
+        <button class="btn btn-danger btn-lg">Crear Categorias</button>
+    </form>
+    <form action="{% url 'categoria-lista' %}">
+        <button class="btn btn-danger btn-lg">Listar Categorias</button>
+    </form>
+{% endblock %}

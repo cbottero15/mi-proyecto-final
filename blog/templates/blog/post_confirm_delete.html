@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+
+{% block titulo%} Borrar Posteos {% endblock %}
+
+{% block contenido %}
+
+    <form method="post">
+        {% csrf_token %}
+        "¿ Estás seguro de borrar el post {{ object }} ?"
+        <input type="submit" value="SI">
+    </form>
+    
+    <form action="{% url 'inicio' %}">
+        <button class="btn btn-danger btn-lg">Volver</button>
+      </form>
+
+{% endblock %}
