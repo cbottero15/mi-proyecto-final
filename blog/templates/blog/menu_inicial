@@ -1,7 +1,6 @@
 {% extends 'blog/base.html' %}
 {% block contenido %}
 <div class="container">
-
     <h3 style="text-align:left;">USUARIOS</h3>
     <form action="{% url 'crear-usuario' %}">
         <button class="btn btn-danger btn-lg">Crear Usuario</button>
